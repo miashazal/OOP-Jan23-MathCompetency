@@ -1,9 +1,10 @@
 package com.example.mathcompetencysurvey;
 
 public class Ministry {
-    private String year;
-    protected static String ministryname;
+    private String ministryname;
     // attributes
+    private String year;
+    private static String ministryname;
     private DSchoolList schoollist;
     private String pic;
 
@@ -11,20 +12,12 @@ public class Ministry {
         this.pic = pic;
     }
 
-    public String getYear() {
-        return year;
-    }
-
-    public void setYear(String year) {
-        this.year = year;
-    }
-
-    public static String getMinistryname() {
+    public String getMinistryname() {
         return ministryname;
     }
 
-    public static void setMinistryname(String ministryname) {
-        Ministry.ministryname = ministryname;
+    public void setMinistryname(String ministryname) {
+        this.ministryname = ministryname;
     }
 
     public DSchoolList getSchoollist() {
@@ -44,20 +37,19 @@ public class Ministry {
     }
 
     public static void main(String args[]) {
+        //Ministry.ministryname="MOE";
+        
+        //application test code
+        Ministry min1= new Ministry ("Damia");
+        min1.setMinistryname("MOE');
+        min1.setYear("2022");
+                             
+        Ministry min2= new Ministry ("Nisa");
+        min2.setMinistryname("MOE");
+        min2.setYear("2023");                    
+                             
+                             
 
-        Ministry.setMinistryname("MOE");
-
-        // application test code
-        Ministry ministry21 = new Ministry("Abdul Majid");
-        ministry21.setYear("2021");
-
-        Ministry ministry22 = new Ministry("Abdul Sattar");
-        ministry22.setYear("2022");
-
-        System.out.println("Ministry name for y 2021: "+
-                ministry21.getMinistryname());
-        System.out.println("Ministry name for y 2022: "+
-                ministry22.getMinistryname());
 
     }
 }
