@@ -18,7 +18,7 @@ public class Ministry {
         return examiners.get(i);
     }
     public void addExaminer(Examiner examiner) {
-        
+        examiners.add(examiner);
     }
 
     public String getYear() {
